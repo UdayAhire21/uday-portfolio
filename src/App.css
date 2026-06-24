@@ -1,0 +1,50 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+overflow-x:hidden;
+}
+
+section{
+padding:100px 10%;
+}
+
+h2{
+font-size:45px;
+text-align:center;
+margin-bottom:50px;
+color:#ff6b00;
+display: block;
+visibility: visible;
+opacity: 1;
+}
+
+.main-content{
+  position: relative;
+  z-index: 2;
+}
+
+.projects-title h2 {
+  color: #ff6b00 !important;
+
+  -webkit-text-fill-color: #ff6b00 !important;
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+  display: block !important;
+
+  text-shadow:
+    0 0 10px rgba(255,107,0,.8),
+    0 0 25px rgba(255,107,0,.4);
+
+  z-index: 9999;
+  position: relative;
+}

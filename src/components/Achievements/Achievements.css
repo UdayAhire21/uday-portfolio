@@ -1,0 +1,146 @@
+.achievements {
+  background: transparent;
+  color: white;
+  padding: 100px 10%;
+  position: relative;
+}
+
+.achievements::before {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  left: -100px;
+  top: 100px;
+
+  background: rgba(0,212,255,.12);
+
+  filter: blur(180px);
+
+  pointer-events: none;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 45px;
+  color: #ff6b00;
+}
+
+.underline {
+  width: 120px;
+  height: 4px;
+
+  background: #00d4ff;
+
+  margin: 15px auto;
+
+  border-radius: 10px;
+}
+
+.achievement-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 30px;
+}
+
+/* Glassmorphism Card */
+
+.achievement-card {
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  transition: .4s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.achievement-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,107,0,.15),
+    transparent
+  );
+
+  transition: .8s;
+}
+
+.achievement-card:hover::before {
+  left: 100%;
+}
+
+.achievement-card:hover {
+
+  transform: translateY(-12px);
+
+  border-color: rgba(255,107,0,.4);
+
+  box-shadow:
+    0 0 25px rgba(255,107,0,.25);
+}
+
+.achievement-icon {
+  font-size: 50px;
+
+  margin-bottom: 20px;
+}
+
+.achievement-card h3 {
+  color: #ff6b00;
+
+  margin-bottom: 15px;
+
+  font-size: 22px;
+}
+
+.achievement-card p {
+  color: #cfcfcf;
+
+  line-height: 1.8;
+}
+
+@media(max-width:768px){
+
+  .section-title h2{
+    font-size:35px;
+  }
+
+  .achievement-grid{
+    grid-template-columns:1fr;
+  }
+
+}

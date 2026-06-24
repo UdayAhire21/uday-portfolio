@@ -1,0 +1,185 @@
+.about {
+  background: transparent;
+  color: white;
+  padding: 100px 10%;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 45px;
+  color: #ff6b00;
+}
+
+.underline {
+  width: 120px;
+  height: 4px;
+  background: #00d4ff;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text h3 {
+  color: #00d4ff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #d1d1d1;
+}
+
+.about-text span {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+.about-buttons {
+  margin-top: 30px;
+}
+
+.about-buttons button {
+  padding: 12px 25px;
+
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  margin-right: 15px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.4s;
+}
+
+/* CHANGE THIS: */
+.about-buttons a:first-child button {
+  background: linear-gradient(
+    135deg,
+    #ff6b00,
+    #ff9500
+  );
+  color: white;
+}
+
+/* AND CHANGE THIS: */
+.about-buttons a:first-child button:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 20px rgba(255,107,0,.5);
+}
+
+.secondary-btn {
+  background: transparent;
+
+  border: 2px solid #00d4ff !important;
+
+  color: #00d4ff;
+}
+
+.secondary-btn:hover {
+  background: #00d4ff;
+  color: black;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Glassmorphism Card */
+
+.info-card {
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  transition: 0.4s;
+}
+
+.info-card:hover {
+
+  transform: translateY(-10px);
+
+  border-color: rgba(255,107,0,.4);
+
+  box-shadow:
+    0 0 25px rgba(255,107,0,.25);
+}
+
+.info-card h4 {
+  color: #ff6b00;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  color: #d1d1d1;
+  margin-bottom: 5px;
+}
+
+/* Glow behind cards */
+
+.about::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  top: 0;
+  right: 0;
+
+  background: rgba(255,107,0,.12);
+
+  filter: blur(150px);
+
+  pointer-events: none;
+}
+
+@media(max-width:900px){
+
+  .about-content{
+    grid-template-columns:1fr;
+  }
+
+  .about-cards{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2{
+    font-size:35px;
+  }
+
+}

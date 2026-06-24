@@ -1,0 +1,190 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 107, 0, 0.3);
+  box-shadow:
+0 0 20px rgba(255,107,0,.08);
+  z-index: 1000;
+}
+
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  cursor:pointer;
+}
+
+.logo-img{
+  width:38px;
+  height:38px;
+
+  border-radius:8px;
+
+  object-fit:cover;
+
+  transition:.4s;
+}
+
+.logo-img:hover{
+  transform:rotate(5deg) scale(1.08);
+}
+
+.logo-text{
+  font-size:28px;
+  font-weight:700;
+
+  background:linear-gradient(
+    90deg,
+    #ff6b00,
+    #00d4ff
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.navbar {
+  z-index: 999;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.logo span {
+  color: #ff6b00;
+  text-shadow: 0 0 15px #ff6b00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #ff6b00;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #ff6b00;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.resume-btn {
+  padding: 10px 24px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b00,
+    #ff9500
+  );
+
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.4s;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #ff6b00;
+}
+
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+
+    width: 100%;
+    background: #111;
+
+    flex-direction: column;
+    text-align: center;
+
+    padding: 30px 0;
+    transition: 0.4s;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+.nav-links .active {
+  color: #ff6b00;
+  position: relative;
+}
+
+.nav-links .active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 100%;
+  height: 5px;
+border-radius: 0 10px 10px 0;
+
+  background: #ff6b00;
+
+  box-shadow:
+    0 0 10px #ff6b00;
+}
+
+
+}
