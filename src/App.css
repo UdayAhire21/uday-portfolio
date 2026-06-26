@@ -48,3 +48,52 @@ opacity: 1;
   z-index: 9999;
   position: relative;
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Phones & Tablets)
+========================================= */
+
+@media (max-width: 900px) {
+  
+  /* 1. Stack the main sections vertically */
+  .hero, 
+  .about-content, 
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  /* 2. Force grid elements into a single column */
+  .about-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* 3. Center buttons and social links */
+  .hero-buttons, 
+  .hero-social, 
+  .hero-stats,
+  .about-buttons {
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on super small screens */
+  }
+
+  /* 4. Reduce massive text sizes */
+  .hero-left h1 {
+    font-size: 50px;
+  }
+  .section-title h2 {
+    font-size: 35px;
+  }
+  .contact-info h3 {
+    font-size: 28px;
+  }
+
+  /* 5. Adjust padding so it doesn't touch the phone edges */
+  .hero, .about, .contact {
+    padding: 100px 5% 50px;
+  }
+}
